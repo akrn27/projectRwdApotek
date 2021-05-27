@@ -33,9 +33,9 @@
               <div class="navbar-nav ms-auto">
                 <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                 <a class="nav-link" href="#Medicine">Medicine</a>
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#contact">Contact</a>
-                <a class="btn btn-success tombol" href="#">LOGOUT</a>
+                <a class="nav-link" href="../aboutus.html">About</a>
+                <a class="nav-link" href="../contactus.html">Contact</a>
+                <a class="btn btn-success tombol" href="../sign.html">LOGOUT</a>
               </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
         <form id="frmCadastre" class="form-horizontal col-md-6">
             <div class="form-group">
                 <label for="txtID">ID:</label>
-                <input class="form-control" type="text" id="txtID"/>
+                <input class="form-control" type="text" id="txtID" disabled/>
             </div>
             <div class="form-group">
                 <label for="txtName">Name:</label>
@@ -57,16 +57,25 @@
             </div>
             <div class="form-group">
                 <label for="txtMedicine">Medicine Name:</label>
-                <input class="form-control" type="text" id="txtMedicine"/>
+                <!-- <input class="form-control" type="text" id="txtMedicine"/> -->
+                <select class="form-control" name="cars" id="txtMedicine">
+                    <option value="Acarbose">Acarbose</option>
+                    <option value="Antibiotik">Antibiotik</option>
+                    <option value="Paracetamol">Paracetamol</option>
+                    <option value="Promag">Promag</option>
+                    <option value="Sakatonik Liver">Sakatonik Liver</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="txtQuantity">Quantity:</label>
-                <input class="form-control" type="number" id="txtQuantity"/>
+                <input class="form-control prc" type="number" id="txtQuantity" min="0"/>
             </div>
-            <!-- <div class="form-group">
-                <label for="txtPrice">Total Price:</label>
-                <input class="form-control" type="number" id="txtPrice"/>
-            </div> -->
+            <!-- price in progress -->
+            <div class="form-group">
+                <label for="txtPrice">Total Price: $</label>
+                <output id="result"></output>
+            </div>
+            <!-- end of price -->
             <div class="form-group">
                 <input class="btn btn-success btn-primary" type="button" value="Save" id="btnSave"/>
             </div>
@@ -124,5 +133,16 @@
             Delete();
         }); 
     })
+
+    $('.form-group').on('input','.prc',function(){
+        var totalSum = 0;
+        $('.form-group .prc').each(function(){
+            var inputVal = $(this).val();
+            if($.isNumeric(inputVal)){
+                totalSum += parseFloat(inputVal);
+            }
+        });
+        $('#result').text(totalSum);
+    });
 </script>
 </html>

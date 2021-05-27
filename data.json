@@ -1,0 +1,23 @@
+[
+    {
+        "id" : "1",
+        "title" : "WHAT DO WE DO",
+        "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing",
+        "date" : "Last updated 3 years ago",
+        "img" : "../img/c1.jpg"
+    },
+    {
+        "id" : "2",
+        "title" : "KNOW ABOUT US",
+        "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing",
+        "date" : "Last updated 3 years ago",
+        "img" : "../img/c2.jpg"
+    },
+    {
+        "id" : "3",
+        "title" : "OUR MISSION",
+        "desc" : "Lorem ipsum dolor sit amet, consectetur adipisicing",
+        "date" : "Last updated 3 years ago",
+        "img" : "../img/c3.jpg"
+    }
+]

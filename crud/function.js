@@ -64,10 +64,10 @@ function List(){
 		"<thead>"+
 		"	<tr>"+
 		"	<th></th>"+
-		"	<th>ID</th>"+
+		// "	<th>ID</th>"+
 		"	<th>Name</th>"+
-		"	<th>Medicine</th>"+
-		"	<th>Quantity</th>"+
+		"	<th>Meds</th>"+
+		"	<th>Qt</th>"+
 		"	</tr>"+
 		"</thead>"+
 		"<tbody>"+
@@ -77,7 +77,7 @@ function List(){
 		var cli = JSON.parse(tbClients[i]);
 	  	$("#tblList tbody").append("<tr>"+
 			"<td><img src='edit.png' alt='Edit"+i+"' class='btnEdit' data-id='"+i+"' style='cursor:pointer'/><img src='delete.png' alt='Delete"+i+"' class='btnDelete' data-id='"+i+"' style='cursor:pointer'/></td>" + 
-			"<td>"+cli.ID+"</td>" + 
+			// "<td>"+cli.ID+"</td>" + 
 			"<td>"+cli.Name+"</td>" + 
 			"<td>"+cli.Medicine+"</td>" + 
 			"<td>"+cli.Quantity+"</td>" + 
